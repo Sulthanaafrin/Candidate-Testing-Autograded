@@ -3,33 +3,74 @@ const input = require('readline-sync');
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
-let candidateName;
+let candidateName = ' ';
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question;
-let correctAnswer;
-let candidateAnswer;
+let question = "Who was the first American woman in space? ";
+let correctAnswer = "Sally Ride";
+let candidateAnswer = ' ';
 
 
 //TODO: Variables for Part 2
-let questions;
-let correctAnswers;
+let questions =[];
+let correctAnswers =[];
 let candidateAnswers;
 
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-
+candidateName = input.question("Enter Candidate Name: ");
+//console.log(candidateName);
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
-
+  candidateAnswer1 = input.question1(question1);
 }
+let question1 = "Who was the first American woman in space? ";
+let correctAnswer1 = "Sally Ride";
+let candidateAnswer1 = ' ';
 
-function gradeQuiz(candidateAnswers) {
+
+function gradeQuiz(candidateAnswers1) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
+  if(candidateAnswer1 == correctAnswer1) {
+    console.log("correct answer1");
+  } else {
+    console.log("incorrect answer1");
+  }
+  candidateAnswer2 = input.question2(question2);
+}
+let question2 = "True or False: 5 kilometer == 5000 meters ? ";
+let correctAnswer2 = "true";
+let candidateAnswer2 = ' ';
+
+
+function gradeQuiz(candidateAnswers3) {
+
+  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
+  if(candidateAnswer3 == correctAnswer3) {
+    console.log("correct answer3");
+  } else {
+    console.log("incorrect answer3");
+  }
+
+  candidateAnswer3 = input.question3(question3);
+}
+let question3 = "(5 + 3)/2) * 10 = ?";
+let correctAnswer3 = "40";
+let candidateAnswer3 = ' ';
+
+
+function gradeQuiz(candidateAnswers3) {
+
+  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
+  if(candidateAnswer1 == correctAnswer1) {
+    console.log("correct answer3");
+  } else {
+    console.log("incorrect answer3");
+  }
 
 
 
@@ -42,7 +83,7 @@ function gradeQuiz(candidateAnswers) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log();
+   console.log("Welcome " +candidateName);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
