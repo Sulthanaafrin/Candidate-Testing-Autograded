@@ -72,8 +72,6 @@ function gradeQuiz(candidateAnswers3) {
     console.log("incorrect answer3");
   }
 
-
-
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
 
